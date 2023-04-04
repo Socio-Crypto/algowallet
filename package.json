@@ -2,6 +2,9 @@
   "name": "walletconnect",
   "version": "1.8.0",
   "private": true,
+  "engines": {
+    "node": "16.x"
+  },
   "keywords": [
     "walletconnect",
     "algorand",
