@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// ant design styles
+@import "antd/dist/antd.css";
+
+@import "./variables.scss";
+@import "./components/layout.scss";
+@import "./containers/home.scss";
+@import "./containers/sellNFT.scss";
+
+@font-face {
+  font-family: jura;
+  src: url("/static/fonts/Jura-Bold.ttf");
+}
+@font-face {
+  font-family: montserrat-semibold;
+  src: url("/static/fonts/Montserrat-SemiBold.ttf");
+}
+@font-face {
+  font-family: montserrat-regular;
+  src: url("/static/fonts/Montserrat-Regular.ttf");
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: montserrat-regular, -apple-system, BlinkMacSystemFont, Segoe UI,
+    Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+    sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: white;
+    background: black;
+  }
+}
+
+.header-logo {
+  max-width: 180px;
+  width: 100%;
+}
+
+.jura-bold {
+  font-family: jura;
+}
+
+.main {
+  min-height: 100vh;
+  height: 100%;
+  padding-top: 100px;
+}
+
+@media screen and (min-width: 960px) {
+  .header-logo {
+    max-width: 250px;
+  }
+}
+
+.fadeInUp-animation {
+  animation: fadeInUp 1.5s 0.2s backwards;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.jura-bold {
+  font-family: jura;
+}

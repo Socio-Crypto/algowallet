@@ -1,0 +1,203 @@
+.bg-color {
+    background-color: $dark_color;
+  }
+  
+  .bg-image {
+    background-image: url("/static/images/ellipse-gradient.png");
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .fadeIn-animation {
+    animation: fadeIn 1.5s 0.2s backwards;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .jura-bold {
+    font-family: jura;
+  }
+  
+  .content {
+    animation: fadeIn 2s 0.2s backwards;
+    color: $white_color;
+    &__first-title {
+      font-family: montserrat-semibold;
+      font-size: 20px;
+      color: $secondary_color;
+    }
+    &__second-title {
+      font-family: jura;
+      font-size: 31px;
+    }
+    &__cta-button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 192px;
+      height: 53px;
+      padding: 10px 40px;
+      background: linear-gradient(90deg, #d502f6 0%, #fab21c 100%);
+      border-radius: 20px;
+    }
+  }
+  
+  .nftcard-container {
+    height: 400px;
+    max-width: 300px;
+    width: 100%;
+    @apply relative;
+  }
+  
+  .nftCard {
+    background: rgba(28, 22, 29, 0.63);
+    box-shadow: 15px 15px 8px 2px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    padding: 25px;
+    max-width: 210px;
+    &__title {
+      font-family: montserrat-regular;
+      font-size: 14px;
+      color: #fff;
+      font-weight: 600;
+    }
+    &__sub-title {
+      font-size: 10px;
+      color: #fff;
+      font-weight: 400;
+    }
+    &__caption {
+      font-size: 7px;
+      color: #fff;
+      font-weight: 400;
+    }
+    &__price-title {
+      font-size: 10px;
+      color: #fff;
+      font-weight: 400;
+    }
+    &__price {
+      font-size: 12px;
+      color: #fff;
+      font-weight: 400;
+    }
+    &__price-border {
+      font-size: 12px;
+      font-weight: 400;
+      border-radius: 10px;
+      padding: 5px;
+      border: 2px solid $secondary_color;
+    }
+    &__item1 {
+      animation: rightToleft1 0.6s 1.5s backwards;
+      top: -60px;
+      right: 0;
+      transform: rotate(3deg);
+      z-index: 30;
+      transition: all 0.1s;
+    }
+    &__item2 {
+      animation: rightToleft2 0.6s 0.9s backwards;
+      top: 0px;
+      right: 60px;
+      transform: rotate(-7deg);
+      z-index: 20;
+      transition: all 0.1s;
+    }
+    &__item3 {
+      animation: rightToleft3 0.6s 0.3s backwards;
+      top: 35px;
+      right: 100px;
+      transform: rotate(-20deg);
+      z-index: 10;
+      transition: all 0.1s;
+    }
+  }
+  
+  // card animations
+  @keyframes rightToleft1 {
+    0% {
+      right: -600px;
+      transform: rotate(20deg);
+    }
+    100% {
+      right: 0;
+    }
+  }
+  @keyframes rightToleft2 {
+    0% {
+      right: -600px;
+      transform: rotate(10deg);
+    }
+    100% {
+      right: 50px;
+    }
+  }
+  @keyframes rightToleft3 {
+    0% {
+      right: -600px;
+      transform: rotate(-10deg);
+    }
+    100% {
+      right: 110px;
+    }
+  }
+  
+  @media screen and (min-width: 960px) {
+    .content {
+      &__second-title {
+        font-size: 41px;
+      }
+    }
+    .nftcard-container {
+      height: 400px;
+      max-width: 100vw;
+      width: 100%;
+      @apply relative;
+    }
+    .nftCard {
+      max-width: 300px;
+      &__item1 {
+        top: -60px;
+        right: 0;
+        &:hover {
+          top: -80px;
+          right: -30px;
+          z-index: 999;
+          transition: all 0.1s;
+          transform: rotate(6deg);
+        }
+      }
+      &__item2 {
+        top: 0px;
+        right: 50px;
+        &:hover {
+          top: -20px;
+          right: 90px;
+          transition: all 0.1s;
+          transform: rotate(-10deg);
+          z-index: 999;
+        }
+      }
+      &__item3 {
+        top: 35px;
+        right: 110px;
+        &:hover {
+          top: 10px;
+          right: 140px;
+          transition: all 0.1s;
+          transform: rotate(-25deg);
+          z-index: 99;
+        }
+      }
+    }
+  }
+  
